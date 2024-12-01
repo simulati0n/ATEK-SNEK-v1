@@ -10,13 +10,32 @@ class Database:
 
     def create_tables(self):
         #create tables for the database
-        self.cursor.execute("""
-            CREATE TABLE IF NOT EXISTS high_scores (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                player_name TEXT NOT NULL,
-                score INTEGER NOT NULL
-            )
-        """)
+        self.cursor.execute(
+   CREATE TABLE games (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    start_time DATETIME,
+    end_time DATETIME,
+    score INT,
+    level INT,
+    game_over_reason VARCHAR(255)
+);
+
+CREATE TABLE snake_segments (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    game_id INT,
+    x_position INT,
+    y_position INT,
+    segment_number INT,
+    FOREIGN KEY (game_id) REFERENCES games(id)
+);
+
+CREATE TABLE food (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    game_id INT,
+    x_position INT,
+    y_position INT,
+    FOREIGN KEY (game_id) REFERENCES games(id)
+);
         self.connection.commit()
 
     def add_score(self, player_name, score):

@@ -4,7 +4,7 @@ from food import Food
 from score import Score
 from sound import Sound
 from levelManager import LevelManager
-from fact_manager import FactManager
+from factManager import FactManager
 from database import Database
 from ui import UI
 

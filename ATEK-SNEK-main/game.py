@@ -235,7 +235,6 @@ class Game:
         self.level_manager = LevelManager()
 
     def quit(self):
-        self.score.close()
         self.db.close()
         pygame.quit()
 

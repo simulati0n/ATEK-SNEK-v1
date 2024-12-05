@@ -3,7 +3,7 @@ import pygame
 
 class Food:
     def __init__(self, screen_width, screen_height, grid_size):
-        self.image = pygame.image.load("ATEK-SNEK-main/egg.png")
+        self.image = pygame.image.load("egg.png")
         self.image = pygame.transform.scale(self.image, (grid_size, grid_size))
         self.grid_size = grid_size
         self.position = [0, 0]

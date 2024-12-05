@@ -4,9 +4,9 @@ class Sound:
     def __init__(self):
         pygame.mixer.init()
         self.sounds = {
-            "eat": "ATEK-SNEK-main/eat.mp3",
-            "level_up": "ATEK-SNEK-main/level_up.mp3",
-            "game_over": "ATEK-SNEK-main/game_over.mp3",
+            "eat": "eat.mp3",
+            "level_up": "level_up.mp3",
+            "game_over": "game_over.mp3",
         }
 
     def play_sound(self, sound_name):

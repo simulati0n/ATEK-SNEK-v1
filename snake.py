@@ -5,7 +5,7 @@ class Snake:
         self.grid_size = grid_size
         self.body = [[100, 100], [80, 100], [60, 100]]  #snake body
         self.direction = "RIGHT"
-        self.head_image = pygame.image.load("ATEK-SNEK-main/snakeHead.png")  #head image
+        self.head_image = pygame.image.load("snakeHead.png")  #head image
         self.head_image = pygame.transform.scale(self.head_image, (grid_size, grid_size))  #scale to grid size
 
     def move(self):
